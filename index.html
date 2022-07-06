@@ -41,11 +41,19 @@
 </header>
       
     <main>
-    
+    <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+            <button type="button" class="btn-close" data-modal-close>
+                <svg width="30px" height="30px">
+                    <use href="./images/icons.svg#icon-close"> </use>
+                </svg>
+            </button>
+        </div>
+    </div>
         <section class="hero">
             <div class="container">
                 <h1 class="hero-title">ЭФФЕКТИВНЫЕ РЕШЕНИЯ ДЛЯ ВАШЕГО БИЗНЕСА</h1>
-                <button type="button" class="btn">Заказать услугу</button>
+                <button type="button" class="btn" data-modal-open>Заказать услугу</button>
             </div>
            
         </section>
@@ -85,16 +93,20 @@
             <ul class="work-list">
                 <li class="item"><img
                 src="./images/box-1.jpg" 
-                alt="робочий стіл з планшетом та клавіатурою" width="370" height="294"></li>
+                alt="робочий стіл з планшетом та клавіатурою" width="370" height="294">
+                    <h3 class="item-title">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</h3>
+            </li>
                 <li class="item"><img
                     src="./images/box-2.jpg"
                     alt="працює з ноутбуком та телефоном в руках"
                     width="370" height="294">
+                    <h3 class="item-title">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</h3>
                 </li>
                 <li class="item"><img
                 src="./images/box-3.jpg"
                 alt="обирає колір на планшеті"
                 width="370" height="294">
+                <h3 class="item-title">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</h3>
                 </li>
             </ul>
         </div>
@@ -324,6 +336,6 @@
             </div>
         </footer>
     
-    
+    <script src="./js/modal.js"></script>
 </body>
 </html>
