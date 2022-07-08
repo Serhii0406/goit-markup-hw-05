@@ -620,11 +620,13 @@ a:link {
 
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: var(--primary-bgc-color);
+
     border-radius: 50% 50%;
 }
 
 .svg-close {
     fill: var(--logo-color);
+    
 }
 
 /* portfolio */
