@@ -103,6 +103,8 @@ a:link {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .site-nav .link.current {
@@ -130,11 +132,14 @@ a:link {
     margin-right: 10px;
     width: 10px;
     height: 16px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .item-icon.mail {
     margin-right: 10px;
     width: 16px;
     height: 12px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .header-contacts .item:hover {
     fill: var(--accent-color);
@@ -150,6 +155,7 @@ a:link {
     padding-top: 32px;
     padding-bottom: 32px;
     align-items: center;
+    
 }
 .header-contacts .item {
     margin-right: 50px;
@@ -164,6 +170,8 @@ a:link {
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 .header-contacts a:hover,
 .header-contacts a:focus {
@@ -173,44 +181,7 @@ a:link {
 
 /* main */
 
-.backdrop {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    background-color: rgba(0, 0, 0, 0.2);
-}
-.backdrop.is-hidden {
-    opacity: 0;
-    pointer-events: none;
-}
-.modal {
-    height: 581px;
-    width: 528px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    
-    background-color: var(--primary-bgc-color);
-}
-.btn-close {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    top: 8px;
-    right: 8px;
-    cursor: pointer;
-    color: var(--logo-color);
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: var(--primary-bgc-color);
-    border-radius: 50% 50%;
-}
-.btn-close svg {
-    fill: currentColor;
-}
+
 .hero {
    display: flex;
    margin-left: auto;
@@ -247,6 +218,7 @@ a:link {
 
 .btn {
     background-color: var(--btn-bg-color);
+
     color: var(--footer-text-color);
     cursor: pointer;
 
@@ -444,9 +416,11 @@ a:link {
     align-items: center;
 
     display: flex;
-        justify-content: center;
-        gap: 10px;
-        border-radius: 50% 50%;
+    justify-content: center;
+    gap: 10px;
+    border-radius: 50% 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sl-team:hover {
     background-color: var(--accent-color);
@@ -481,6 +455,7 @@ a:link {
     
     cursor: pointer;
     
+    
 }
 .client-link {
     box-sizing: border-box;
@@ -491,12 +466,13 @@ a:link {
     justify-content: center;
     border-radius: 4px;
     border: 1px solid var(--icon-color);
-    cursor: pointer;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .client-icon {
     width: 106px;
     height: 60px;
     fill: var(--icon-color);
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
     
 }
 
@@ -588,6 +564,8 @@ a:link {
     justify-content: center;
     gap: 10px;
     border-radius: 50% 50%;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .sl-footer:hover {
     background-color: var(--accent-color);
@@ -598,6 +576,55 @@ a:link {
 .sl-icon-footer {
     fill: var(--footer-text-color);
         
+}
+/* modal */
+.backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    transition: opacity 0.5s, visibility 0.5s, transform 0.5s;
+    
+}
+
+.backdrop.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transform: scale(0);
+   
+}
+
+.modal {
+    height: 581px;
+    width: 528px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);   
+
+    background-color: var(--primary-bgc-color);
+}
+
+.btn-close {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 8px;
+    right: 8px;
+    cursor: pointer;
+
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--primary-bgc-color);
+    border-radius: 50% 50%;
+}
+
+.svg-close {
+    fill: var(--logo-color);
 }
 
 /* portfolio */
@@ -619,6 +646,7 @@ a:link {
     
     padding: 6px 22px;
     background-color: var(--sec-studio-btn-bgc);
+
     color: var(--primary-text-color);
     font-family: Roboto;
     cursor: pointer;
@@ -630,6 +658,8 @@ a:link {
     
     border-radius: 4px;
     border-color: transparent;
+
+    transition: background-color color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
 .btn-port:hover,
@@ -643,6 +673,8 @@ a:link {
     text-align: center;
     letter-spacing: 0.03em;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    
 }
 .port-list {
     display: flex;
@@ -679,14 +711,26 @@ a:link {
 
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
-.port-list .item:hover .overlay::before {
+
+.port-list .item .overlay::before {
     content: '';
     width: 370px;
     height: 294px;
     position: absolute;
     top: 0;
     left: 0;
+    overflow: hidden;
+    opacity: 0;
     background-image: linear-gradient(to right, rgba(33, 150, 243, 0.9), rgba(33, 150, 243, 0.9));
+    transform: translateY(100%);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: none;
+
+}
+.port-list .item:hover .overlay::before {
+    opacity: 1;
+    overflow: hidden;
+    transform: translateY(0);
 
 }
 .overlay-text {
@@ -699,9 +743,14 @@ a:link {
     line-height: 1.56;
     letter-spacing: 0.03em;
     color: var(--footer-text-color);
+    transform: translateY(100%);
+    transition: transform 250ms;
+    pointer-events: none;
 }
 .port-list .item:hover .overlay-text {
     opacity: 1;
+    transform: translateY(0);
+    
 }
 .port-subtitle {
     margin-bottom: 4px;
@@ -717,4 +766,5 @@ a:link {
     font-size: 16px;
     line-height: 1.88;
     letter-spacing: 0.03em;
+    
 }
